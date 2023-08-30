@@ -1,0 +1,11 @@
+#####  COMMANDS ######
+
+Flask:
+## Activate Enviornment ##
+    .venv\Scripts\activate 
+
+## Exit Enviornment ##
+    deactivate
+
+## Start App ##
+    flask run 
