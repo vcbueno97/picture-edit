@@ -21,3 +21,14 @@ Flask:
 
 ## Start App ##
     flask run 
+
+##### GIT COMMANDS #####
+
+## Add files to local branch ##
+    git add .
+
+## Commit Changes ##
+    git commit -m "comment" //-m message 
+
+## Push to remote branch ##
+    git push
