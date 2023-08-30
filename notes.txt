@@ -1,8 +1,20 @@
-#####  COMMANDS ######
+##### PC COMMANDS ######
 
 Flask:
 ## Activate Enviornment ##
     .venv\Scripts\activate 
+
+## Exit Enviornment ##
+    deactivate
+
+## Start App ##
+    flask run 
+
+##### MAC COMMANDS ######
+
+Flask:
+## Activate Enviornment ##
+    python3 -m venv .venv 
 
 ## Exit Enviornment ##
     deactivate
