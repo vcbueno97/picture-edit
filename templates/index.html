@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Picture Edit</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+{% extends "template.html" %}
 
-</html>
+{% block body %}
+    <form action="/edit" enctype=multipart/form-data method="post">
+        <label for="img">Select image:</label>
+        <input type="file" name="img" accept="image/*">
+        <input type="submit">
+    </form>
+{% endblock %}
