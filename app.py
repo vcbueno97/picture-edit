@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for
 from PIL import Image
-
+import os
 
 app = Flask(__name__)
 
@@ -13,15 +13,16 @@ def index():
 def edit():
     user_img = request.files.get("img")
 
-    with Image.open(user_img) as im:
-        px = im.load()
+    im = Image.open(user_img) 
 
-    for x in range(im.size[0]):
-        for y in range(im.size[1]):
-            px[x, y] = (0, 0, 0)
-    im.save("static/output.png")
+    im.save("static/userimg.png")
     
-    return render_template("edit.html")
+    if os.path.exists('static/userimg.png'):
+        imgpath = url_for('static', filename='userimg.png')
+    else:
+        imgpath = url_for('static', filename='error.png')
+
+    return render_template("edit.html", imgpath=imgpath)
 
 
 
